@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Class</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      /* h1:hover {
+        color: green;
+        font-size: 35px;
+        background-color: yellow;
+      } */
+      .special-effect:hover {
+        color: green;
+        font-size: 35px;
+        background-color: yellow;
+      }
+      input:focus {
+        color: green;
+        font-size: 25px;
+      }
+      li:first-child {
+        background-color: aqua;
+      }
+      li:last-child {
+        background-color: red;
+      }
+      li:nth-child(2n) {
+        color: burlywood;
+        font-style: italic;
+        font-size: 25px;
+      }
+      a:visited {
+        color: red;
+      }
+      h1::before {
+        content: "Hello ";
+        color: blueviolet;
+        font-size: 35px;
+      }
+      .special-effect::after {
+        content: ", bye!";
+      }
+      body {
+        counter-reset: section;
+      }
+      p::before {
+        counter-increment: section;
+        content: "Crush ❤️" counter(section) ": ";
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pseudo Class</h1>
+    <h1 class="special-effect">Normal Class</h1>
+    <h1 class="special-effect">Vodro Class</h1>
+    <input type="email" name="email" />
+    <br />
+    <input type="email" name="password" />
+    <br />
+    <a href="https://www.youtube.com">Youtube</a>
+    <a href="https://www.google.com">google</a>
+    <ul>
+      <li>alia</li>
+      <li>dalia</li>
+      <li>malia</li>
+      <li>kalia</li>
+      <li>jalia</li>
+      <li>falia</li>
+    </ul>
+
+    <p>alia</p>
+    <p>dalia</p>
+    <p>malia</p>
+    <p>kalia</p>
+    <p>jalia</p>
+    <p>falia</p>
+  </body>
+</html>
