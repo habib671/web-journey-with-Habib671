@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query with Flex</title>
+    <style>
+      .container {
+        display: flex;
+        /* flex-wrap: wrap; */
+        max-width: 1200px;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+        margin: 0 auto;
+      }
+      .food {
+        border: 3px solid gray;
+        border-radius: 10px;
+        margin: 10px;
+        width: 450px;
+      }
+      .food img {
+        width: 100%;
+      }
+      @media (max-width: 760px) {
+        .container {
+          flex-direction: column;
+        }
+        .container .food {
+          background-color: green;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container .food {
+          background-color: skyblue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea beatae id
+          cumque nulla rem itaque veritatis. Id dolorum ipsa quae, consectetur
+          repellendus temporibus. A tempore quasi vero magni, nulla eius veniam
+          cumque suscipit ducimus facere vitae ullam perspiciatis corrupti
+          dolore.
+        </p>
+      </div>
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Voluptate, sit saepe repellat dicta aperiam quo neque rem nihil
+          explicabo dolore provident officia architecto beatae ut, ipsa
+          consectetur ex dolor, consequuntur fugiat accusantium quidem non. Rem,
+          magnam? Molestiae, harum. Omnis saepe natus sapiente incidunt magnam
+          consequatur asperiores iste doloribus.
+        </p>
+      </div>
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Sint animi nulla, voluptates placeat ab recusandae aut, iusto
+          veritatis expedita voluptatem modi magnam quas corrupti tenetur
+          laudantium illum eum aperiam laboriosam. Quibusdam non debitis,
+          nostrum inventore deleniti corporis eveniet harum illo doloribus quos
+          nesciunt expedita, at sequi! Nam, consectetur?
+        </p>
+      </div>
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Repudiandae est iure numquam animi esse eius illo excepturi dolor
+          minus voluptatum dignissimos eaque deleniti perferendis quidem facilis
+          mollitia tenetur consectetur, optio quam doloremque. Necessitatibus ea
+          temporibus beatae, facere quis doloribus animi et aperiam! Vitae sint
+          veritatis harum sunt consequuntur.
+        </p>
+      </div>
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Illum incidunt obcaecati commodi expedita, illo placeat aliquam
+          aspernatur quia unde iusto ab nisi eum aperiam facilis nobis,
+          voluptatum, molestiae nam in tenetur labore dolorum itaque ipsa
+          temporibus. Vero, ipsam! Officiis at dolorem recusandae quos itaque
+          magnam doloribus nisi exercitationem?
+        </p>
+      </div>
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Cupiditate, quaerat harum, autem excepturi ipsum architecto ullam
+          fugiat explicabo atque animi omnis, laudantium vel doloribus?
+          Repellendus dolor explicabo eum. Aperiam inventore pariatur saepe
+          deleniti porro, eius optio blanditiis ullam voluptatibus asperiores
+          quam soluta eligendi nobis possimus iure quos? Illum!
+        </p>
+      </div>
+      <!-- <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Delectus ratione libero neque? Maxime, nihil. Necessitatibus corporis
+          ipsum aliquid recusandae suscipit animi provident odit impedit
+          eligendi aspernatur excepturi dignissimos dicta nostrum maiores eos,
+          eius perferendis exercitationem dolorum explicabo fuga ea reiciendis
+          voluptas numquam incidunt. Culpa laudantium harum voluptatibus
+          corrupti.
+        </p>
+      </div>
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Labore omnis quis eaque ullam totam corrupti optio dolores architecto
+          quae, minima ipsa rerum placeat fugiat vero dolorum soluta, velit qui
+          dicta error iste amet quo natus! Excepturi minus voluptate beatae
+          accusamus natus? Ea nobis similique placeat, nam accusamus illo.
+        </p>
+      </div>
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Hic mollitia eligendi officia maiores. Maxime dolores nobis incidunt
+          officia cupiditate modi voluptatibus impedit sunt fugit porro velit
+          excepturi fuga quos, explicabo consequuntur. Modi quasi quo aliquam
+          rerum, quam eum totam rem? Officia ab deleniti corrupti amet obcaecati
+          fuga quasi!
+        </p>
+      </div>
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Vel recusandae dicta veniam nihil, tempore voluptates qui obcaecati
+          pariatur id cum voluptate corporis magnam, amet esse eum sunt nemo
+          ducimus veritatis! Sapiente, vel veritatis optio inventore voluptas,
+          perspiciatis, magnam dicta ullam accusantium nihil repellat provident
+          nisi autem impedit quia!
+        </p>
+      </div>
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Mollitia, aspernatur. Minus voluptatum natus corporis aspernatur
+          eligendi? Nam asperiores similique dolorem, unde sint laborum tenetur,
+          ullam perferendis molestias accusantium velit natus, minima autem
+          perspiciatis quos porro aut dolores vero explicabo libero impedit
+          dolor neque ipsum? Accusamus repellat itaque dicta?
+        </p>
+      </div>
+      <div class="food">
+        <img src="burger.jpg" alt="" />
+        <p>
+          Esse a, repellendus labore necessitatibus sed explicabo, velit
+          reprehenderit enim officiis ut neque laborum veritatis aliquid et
+          deleniti optio nostrum vitae, nulla magnam temporibus voluptas natus
+          odit! Reiciendis quod iste totam cumque, dolore possimus ullam,
+          ducimus libero excepturi at natus!
+        </p>
+      </div> -->
+    </div>
+  </body>
+</html>

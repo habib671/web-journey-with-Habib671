@@ -1,0 +1,20 @@
+.box {
+  width: 400px;
+  height: 200px;
+  border: 2px solid purple;
+  /* overflow: hidden; */
+  /* overflow: scroll; */
+  /* overflow: visible; */
+  overflow: auto;
+}
+.box2 {
+  width: 400px;
+  height: 200px;
+  border: 2px solid green;
+  /* visibility: hidden; */
+}
+
+.image .pic {
+  width: 400px;
+  height: 200px;
+}
