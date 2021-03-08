@@ -41,17 +41,15 @@
   width: 120px;
 }
 
-.shoe1,
-.shoe2,
-.shoe3 {
+.shoe1 {
   background-color: #fff;
   /* padding: 10px;
   border: 1px solid black; */
 }
-.shoe-cat img {
+/* .shoe-cat img {
   width: 422px;
   height: 253px;
-}
+} */
 .card {
   border: none;
   box-shadow: 5px 5px 10px lightgray;
