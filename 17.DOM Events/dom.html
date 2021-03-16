@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      article {
+        border: 3px solid tomato;
+        border-radius: 20px;
+
+        margin: 10px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h3>Exploring DOM</h3>
+        <article id="first-article">
+          <h3>article-1</h3>
+          <p class="authoor">author-1</p>
+          <p class="description">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum
+            reiciendis quo vitae minus voluptates magnam autem praesentium sequi
+            inventore debitis odit distinctio mollitia perspiciatis odio quas,
+            quod dicta. Repellat, omnis?
+          </p>
+        </article>
+        <article class="special">
+          <h3>article-2</h3>
+          <p class="authoor">author-2</p>
+          <p class="description">
+            Tempora doloremque facilis dignissimos quas? Dolores eligendi
+            delectus fuga, necessitatibus fugiat cum ipsam deleniti, nihil
+            voluptates minima excepturi, praesentium est provident ipsa in.
+            Nesciunt, vero dicta facilis reiciendis dolor harum.
+          </p>
+        </article>
+        <article>
+          <h3>article-3</h3>
+          <p class="authoor">author-3</p>
+          <p class="description">
+            Doloremque quidem nemo totam ab, illo corporis accusamus eos odit
+            placeat voluptatem perspiciatis error porro suscipit? Alias voluptas
+            consequatur voluptates provident odio at, eum laudantium earum! Enim
+            esse fugiat fuga.
+          </p>
+        </article>
+        <article>
+          <ul id="gift-list">
+            <li>goft-item-1</li>
+            <li>goft-item-2</li>
+            <li>goft-item-3</li>
+            <li>goft-item-4</li>
+            <li>goft-item-5</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+    <script>
+      document.body.style.backgroundColor = "gray";
+      //   console.log(document.body);
+      var authors = document.getElementsByClassName("authoor");
+      console.log(authors);
+      for (var i = 0; i < authors.length; i++) {
+        var element = authors[i];
+        // console.log(element);
+        element.innerHTML = "Lekhok-" + i;
+        element.style.backgroundColor = "lightblue";
+        element.style.fontSize = "30px";
+        element.setAttribute("title", "all are authors");
+      }
+      var title = document.querySelector("h3");
+      title.setAttribute("title", "you are a h3 tag");
+
+      const article = document.getElementById("first-article");
+      const newParagraph = document.createElement("p");
+      newParagraph.innerHTML = "this is added by js";
+      article.appendChild(newParagraph);
+
+      const ul = document.getElementById("gift-list");
+      const newLi = document.createElement("li");
+      newLi.innerHTML = "Special Gift for yOu";
+      ul.appendChild(newLi);
+    </script>
+  </body>
+</html>
