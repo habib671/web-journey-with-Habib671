@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble Event Listener</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1>My List</h1>
+      <ul id="mylist">
+        <li class="item" id="first">Lorem, ipsum dolor.</li>
+        <li class="item">Iure, distinctio velit.</li>
+        <li class="item">Iure, cumque distinctio!</li>
+        <li class="item">Illo, minus cupiditate?</li>
+        <li class="item">Minus, dignissimos officia.</li>
+      </ul>
+      <button id="new-item">Add New Item</button>
+    </div>
+    <script>
+      //   document
+      //     .getElementById("first")
+      //     .addEventListener("click", function (event) {
+      //       console.log("first item clicked");
+      //       event.stopPropagation();
+      //     });
+      //   document
+      //     .getElementById("mylist")
+      //     .addEventListener("click", function (event) {
+      //       console.log("ul clicked");
+      //     });
+      //   document
+      //     .getElementById("container")
+      //     .addEventListener("click", function (event) {
+      //       console.log("container clicked");
+      //     });
+
+      //   var items = document.getElementsByClassName("item");
+      //   for (let i = 0; i < items.length; i++) {
+      //     const item = items[i];
+      //     item.addEventListener("click", function (event) {
+      //       //   console.log(this, event.target.innerText);
+      //       //   console.log(event.target.parentNode);
+      //       event.target.parentNode.removeChild(event.target);
+      //     });
+      //   }
+      document
+        .getElementById("new-item")
+        .addEventListener("click", function (event) {
+          var parent = document.getElementById("mylist");
+          var newli = document.createElement("li");
+          newli.innerText = "New Item Added";
+          parent.appendChild(newli);
+        });
+      document
+        .getElementById("mylist")
+        .addEventListener("click", function (event) {
+          //   console.log(this, event.target);
+          event.target.parentNode.removeChild(event.target);
+        });
+    </script>
+  </body>
+</html>

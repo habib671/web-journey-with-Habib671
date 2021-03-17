@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evenet Management Company</title>
+    <style>
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 onclick="alert('You just clicked')">Exploring Events</h1>
+    <button id="firstButton">Tomato</button> <br />
+    <button onClick="alert(7)">Click Me</button> <br />
+    <button id="second">Green</button> <br />
+    <button onmouseout="alert(7)">Click Me</button>
+    <br />
+    <button id="button5">Blue</button> <br />
+    <button id="lastButton">Click Me</button>
+    <script>
+      function handleClick() {
+        console.log("Someone cliked me");
+      }
+      var lastBtn = document.getElementById("lastButton");
+      lastBtn.onclick = function () {
+        console.log("Last button clicked");
+      };
+
+      function back_green() {
+        document.body.style.backgroundColor = "green";
+      }
+      function back_tomato() {
+        document.body.style.backgroundColor = "tomato";
+      }
+      function back_blue() {
+        document.body.style.backgroundColor = "blue";
+      }
+      var sec = document.getElementById("second");
+      sec.onclick = back_green;
+
+      var first = document.getElementById("firstButton");
+      first.addEventListener("click", back_tomato);
+
+      document.getElementById("button5").addEventListener("click", back_blue);
+
+      //   document.getElementById("button6").addEventListener("click", function jhakanaka(){
+      //       //do something with DOM JS;
+      //   })
+    </script>
+  </body>
+</html>
